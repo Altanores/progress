@@ -1,0 +1,25 @@
+﻿<Window x:Class="Progress.Pages.EditStudent"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Progress.Pages"
+        mc:Ignorable="d"
+            Height="350" Width="200"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:col="clr-namespace:System.Collections;assembly=mscorlib" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow" ResizeMode="NoResize">
+    <Grid>
+        <StackPanel>
+
+            <Label Content="Изменить" HorizontalAlignment="Center" FontSize="15"/>
+            <TextBox x:Name="boxname" materialDesign:HintAssist.Hint="ФИО" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  FontSize="14"/>
+            <ComboBox x:Name="boxclass" materialDesign:HintAssist.Hint="Класс" materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource SecondaryHueMidBrush}" Style="{StaticResource MaterialDesignFloatingHintComboBox}"/>
+
+            <ComboBox x:Name="boxgend" materialDesign:HintAssist.Hint="Пол" materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource SecondaryHueMidBrush}" Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                <ComboBoxItem Content="Муж"/>
+                <ComboBoxItem Content="Жен"/>
+            </ComboBox>
+            <DatePicker x:Name="boxdr" materialDesign:HintAssist.Hint="Дата рождения"  materialDesign:TextFieldAssist.HasClearButton="True" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
+            <Button Content="Изменить" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Edit_Button" Margin="10"/>
+        </StackPanel>
+    </Grid>
+</Window>

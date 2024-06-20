@@ -1,0 +1,20 @@
+﻿<Window x:Class="Progress.Pages.EditAward"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Progress.Pages"
+        mc:Ignorable="d"
+            Height="250" Width="200"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:col="clr-namespace:System.Collections;assembly=mscorlib" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow" ResizeMode="NoResize">
+    <Grid>
+        <StackPanel>
+
+            <Label Content="Изменить" HorizontalAlignment="Center" FontSize="15"/>
+            <ComboBox x:Name="boxstud" materialDesign:HintAssist.Hint="Студент" materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource SecondaryHueMidBrush}" Style="{StaticResource MaterialDesignFloatingHintComboBox}"/>
+            <ComboBox x:Name="boxstandard" materialDesign:HintAssist.Hint="Норматив" materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource SecondaryHueMidBrush}" Style="{StaticResource MaterialDesignFloatingHintComboBox}"/>
+            <TextBox x:Name="boxcomment" materialDesign:HintAssist.Hint="Коментарий" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  FontSize="14"/>
+            <Button Content="Изменить" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Edit_Button" Margin="10"/>
+        </StackPanel>
+    </Grid>
+</Window>
